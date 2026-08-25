@@ -58,13 +58,6 @@ docker run -d \
     -p 3306:3306 \
     mysql
 ```
-
-3. Se for usar o profile `prd`, rode o script de criação de tabelas antes de subir a API:
-
-```bash
-mysql -h 127.0.0.1 -P 3306 -u root -p db_oscar < src/main/resources/migration-prd.sql
-```
-
 ---
 
 ## 📥 Executando a partir da imagem publicada no Docker Hub
@@ -107,7 +100,7 @@ docker run \
 
 > **Nota:** `host.docker.internal` permite que o container acesse serviços rodando na máquina host. No Linux, dependendo da configuração do Docker, pode ser necessário `--add-host=host.docker.internal:host-gateway`.
 
-A aplicação ficará disponível em: http://localhost:8080
+A aplicação ficará disponível e documentada em: http://localhost:8080
 
 
 ---
